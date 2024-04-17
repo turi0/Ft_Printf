@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_puthexa.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fbartole <fbartole@student.42roma.it>      +#+  +:+       +#+        */
+/*   By: dturella <dturella@student.42roma.it>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/21 16:25:49 by fbartole          #+#    #+#             */
-/*   Updated: 2024/02/26 19:41:23 by fbartole         ###   ########.fr       */
+/*   Created: 2024/04/11 13:14:53 by dturella          #+#    #+#             */
+/*   Updated: 2024/04/11 13:14:53 by dturella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
