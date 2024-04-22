@@ -12,29 +12,29 @@
 
 #include "ft_printf.h"
 
-int	ft_printf_format(char specifire, va_list ap)
+int	ft_printf_format(char specifire, va_list *ap)
 {
 	int	count;
 
 	count = 0;
 	if (specifire == 'c')
-		count += ft_putchar(va_arg(ap, int));
+		count += ft_putchar(va_arg(*ap, int));
 	else if (specifire == 's')
-		count += ft_putstr(va_arg(ap, char *));
+		count += ft_putstr(va_arg(*ap, char *));
 	else if (specifire == 'd' || specifire == 'i')
-		count += ft_putnbr(va_arg(ap, int));
+		count += ft_putnbr(va_arg(*ap, int));
 	else if (specifire == 'u')
-		count += ft_putnbrun(va_arg(ap, unsigned int));
+		count += ft_putnbrun(va_arg(*ap, unsigned int));
 	else if (specifire == '%')
 		count += ft_putchar('%');
 	else if (specifire == 'X')
-		count += ft_puthexa(va_arg(ap, unsigned int), "0123456789ABCDEF");
+		count += ft_puthexa(va_arg(*ap, unsigned int), "0123456789ABCDEF");
 	else if (specifire == 'x')
-		count += ft_puthexa(va_arg(ap, unsigned int), "0123456789abcdef");
+		count += ft_puthexa(va_arg(*ap, unsigned int), "0123456789abcdef");
 	else if (specifire == 'p')
 	{
 		count += ft_putstr("0x");
-		count += ft_putptr(va_arg(ap, unsigned long), 'x');
+		count += ft_putptr(va_arg(*ap, unsigned long), 'x');
 	}
 	return (count);
 }
@@ -52,7 +52,7 @@ int	ft_printf(const char *format, ...)
 	{
 		if (*format == '%')
 		{
-			len += ft_printf_format(*(++format), ap);
+			len += ft_printf_format(*(++format), &ap);
 			format++;
 		}
 		else
