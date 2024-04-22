@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dturella <dturella@student.42roma.it>      +#+  +:+       +#+        */
+/*   By: dturella <dturella@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 13:14:42 by dturella          #+#    #+#             */
-/*   Updated: 2024/04/11 13:14:42 by dturella         ###   ########.fr       */
+/*   Updated: 2024/04/22 19:18:43 by dturella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ int	ft_putnbr(int n);
 int	ft_putchar(char c);
 int	ft_puthexa(unsigned long long n, char *base);
 int	ft_putptr(unsigned long n, const char format);
+int	ft_print_pointer(unsigned long n, const char format);
 int	ft_printf_format(char specifire, va_list *ap);
 int	ft_printf(const char *format, ...);
 int	ft_putnbrun(unsigned int n);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dturella <dturella@student.42roma.it>      +#+  +:+       +#+        */
+/*   By: dturella <dturella@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 13:12:24 by dturella          #+#    #+#             */
-/*   Updated: 2024/04/11 13:12:24 by dturella         ###   ########.fr       */
+/*   Updated: 2024/04/22 19:12:02 by dturella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,7 @@ int	ft_printf_format(char specifire, va_list *ap)
 		count += ft_puthexa(va_arg(*ap, unsigned int), "0123456789abcdef");
 	else if (specifire == 'p')
 	{
-		count += ft_putstr("0x");
-		count += ft_putptr(va_arg(*ap, unsigned long), 'x');
+		count += ft_print_pointer(va_arg(*ap, unsigned long), 'x');
 	}
 	return (count);
 }
